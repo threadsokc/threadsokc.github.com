@@ -1,1 +1,1 @@
-document.getElementById("next-event").innerHTML="May 6";
+document.getElementById("next-event").innerHTML="June 3";
