@@ -1,8 +1,7 @@
-// Since Weebly already uses Prototype, we'll take advantage of their library
+// Weebly loads jQuery, too. Cheaters!
 var dateUrl = '//threadsokc.github.com/js/date.js';
-new Ajax.Request(dateUrl, {
-    onSuccess: showNextWorkday
-    });
+jQuery.getScript(dateUrl, showNextWorkday);
+
 
 function showNextWorkday() {
     // date.js implementation
