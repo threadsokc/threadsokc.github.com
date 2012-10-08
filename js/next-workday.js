@@ -13,7 +13,7 @@ Threads.init = function init() {
         var dateUrl = '//threadsokc.github.com/js/date.js';
         $.getScript(dateUrl, Threads.showNextWorkday());
     });
-    init();
+    this.init();
 };
 
 /**
