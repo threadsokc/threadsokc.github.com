@@ -32,7 +32,7 @@ showNextWorkDay: function() {
  */
 init: function() {
     Threads.showNextWorkday();
-};
+}
 
 };
 
