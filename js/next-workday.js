@@ -9,7 +9,7 @@ var Threads = Threads || {};
  * @requires date.js
  * @returns String Short month and day. 
  */
-Threads.showNextWorkDay = function showNextWorkDay() {
+Threads.showNextWorkDay = function() {
     var workdays = ["Jan. 22", "Feb. 12", "Mar. 4", "Apr. 1", "May 6", "June 3", "July 15", "Aug. 5", "Sept. 9", "Oct. 7", "Nov. 4", "Dec. 9"],
         today = Date.today(),
         month = today.getMonth(),
@@ -26,11 +26,11 @@ Threads.showNextWorkDay = function showNextWorkDay() {
  * Initializer for Threads.
  * @requires jQuery 
  */
-Threads.init = function init() {
+Threads.init = function() {
     var dateUrl = '//threadsokc.github.com/js/date.js';
     $.getScript(dateUrl, Threads.showNextWorkday);
 };
 
-jQuery(function() {
+jQuery(function($) {
     Threads.init();
 });
