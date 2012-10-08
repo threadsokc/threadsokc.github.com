@@ -19,8 +19,8 @@ Threads.showNextWorkDay = function showNextWorkDay() {
             return (today.compareTo(workday) <= 0) ? workdays[month] : workdays[month + 1];
         };
 
-    jQuery.getScript(dateUrl, function() {
-        jQuery('#next-workday span').html(next());
+    jQuery.getScript(dateUrl, function(s) {
+        jQuery('#next-workday span').html(s.next());
         //document.getElementById('next-workday').getElementsByTagName('span')[0].innerHTML = next();
     });
     
