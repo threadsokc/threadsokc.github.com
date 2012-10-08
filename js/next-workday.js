@@ -28,7 +28,7 @@ Threads.showNextWorkDay = function() {
  */
 Threads.init = function() {
     var dateUrl = '//threadsokc.github.com/js/date.js';
-    jQuery.getScript(dateUrl, Threads.showNextWorkday);
+    jQuery.getScript(dateUrl, Threads.showNextWorkday());
 };
 
 jQuery(function() {
