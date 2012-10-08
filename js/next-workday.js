@@ -9,11 +9,8 @@ var Threads = Threads || {};
  * @requires jQuery 
  */
 Threads.init = function init() {
-    jQuery(function($) {
-        var dateUrl = '//threadsokc.github.com/js/date.js';
-        $.getScript(dateUrl, Threads.showNextWorkday());
-    });
-    this.init();
+    var dateUrl = '//threadsokc.github.com/js/date.js';
+    $.getScript(dateUrl, Threads.showNextWorkday());
 };
 
 /**
@@ -33,3 +30,7 @@ Threads.showNextWorkDay = function () {
     jQuery('#next-workday span').html(next());
     //document.getElementById('next-workday').getElementsByTagName('span')[0].innerHTML = next();
 };
+
+jQuery(function() {
+    Threads.init();
+});
