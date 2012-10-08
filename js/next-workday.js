@@ -8,11 +8,12 @@ var Threads = Threads || {};
  * Initializer for Threads.
  * @requires jQuery 
  */
-Threads.init = function () {
-    var dateUrl = '//threadsokc.github.com/js/date.js';
-    jQuery.getScript(dateUrl, function() {
-    return Threads.showNextWorkday();
+Threads.init = function init() {
+    jQuery(function($) {
+        var dateUrl = '//threadsokc.github.com/js/date.js';
+        $.getScript(dateUrl, Threads.showNextWorkday());
     });
+    init();
 };
 
 /**
@@ -32,5 +33,3 @@ Threads.showNextWorkDay = function () {
     jQuery('#next-workday span').html(next());
     //document.getElementById('next-workday').getElementsByTagName('span')[0].innerHTML = next();
 };
-
-Threads.init();
