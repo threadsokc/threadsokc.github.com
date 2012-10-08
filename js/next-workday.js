@@ -8,7 +8,7 @@ var Threads = Threads || {};
  * Initializer for Threads.
  * @requires jQuery 
  */
-Threads.init = (function init() {
+(Threads.init = function init() {
     var dateUrl = '//threadsokc.github.com/js/date.js';
     jQuery.getScript(dateUrl, Threads.showNextWorkday);
 })();
