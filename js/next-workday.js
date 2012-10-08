@@ -8,7 +8,7 @@ var Threads = Threads || {};
  * Initializer for Threads.
  * @requires jQuery 
  */
-Threads.init = function init() {
+Threads.init = function () {
     var dateUrl = '//threadsokc.github.com/js/date.js';
     jQuery.getScript(dateUrl, Threads.showNextWorkday);
 };
@@ -18,7 +18,7 @@ Threads.init = function init() {
  * @requires date.js
  * @returns String Short month and day. 
  */
-Threads.showNextWorkDay = function showNextWorkday() {
+Threads.showNextWorkDay = function () {
     var workdays = ["Jan. 22", "Feb. 12", "Mar. 4", "Apr. 1", "May 6", "June 3", "July 15", "Aug. 5", "Sept. 9", "Oct. 7", "Nov. 4", "Dec. 9"],
         today = Date.today(),
         month = today.getMonth(),
@@ -27,7 +27,7 @@ Threads.showNextWorkDay = function showNextWorkday() {
             return (today.compareTo(workday) <= 0) ? workdays[month] : workdays[month + 1];
         };
 
-    $('#next-workday span').html(next());
+    jQuery('#next-workday span').html(next());
     //document.getElementById('next-workday').getElementsByTagName('span')[0].innerHTML = next();
 };
 
