@@ -31,7 +31,7 @@ Threads.showNextWorkDay = function showNextWorkDay() {
  * @requires jQuery 
  */
 Threads.init = function init() {
-    Threads.showNextWorkday();
+    return Threads.showNextWorkday();
 };
 
 
