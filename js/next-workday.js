@@ -15,9 +15,9 @@ Threads.showNextWorkDay = function () {
         month = today.getMonth(),
         workday = Date.parse(workdays[month]),
         next = function () {
-            var isDec = if(month === 11);
+            var isDec = function(month) { return (month === 11) };
             
-            return (today.compareTo(workday) <= 0) ? workdays[month] : isDec ? workdays[0] : workdays[month + 1];
+            return today.compareTo(workday) <= 0 ? workdays[month] : isDec() ? workdays[0] : workdays[month + 1];
         };
 
     jQuery('#next-workday span').html(next());
