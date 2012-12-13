@@ -35,6 +35,19 @@ Threads.init = function () {
     });
 };
 
-$(window).load(function () {
-    Threads.init();
-});
+(function() {
+    var counter = 0;
+
+    doDetect();
+    function doDetect() {
+        if (typeof jQuery !== "undefined") {
+           Threads.init();
+        }
+        else if (++counter < 5) { // 5 or whatever
+            setTimeout(doDetect, 10);
+        }
+        else {
+           console.error('jQuery not loaded!')
+        }
+    }
+})();
