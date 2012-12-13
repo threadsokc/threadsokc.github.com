@@ -31,7 +31,7 @@ Threads.init = function init() {
     var dateUrl = '//threadsokc.github.com/js/date.js';
 
     $.getScript(dateUrl, function() {
-        Threads.showNextWorkDay);
+        Threads.showNextWorkDay();
     });
 };
 
