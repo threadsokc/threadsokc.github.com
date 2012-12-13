@@ -18,7 +18,7 @@ Threads.showNextWorkDay = function showNextWorkDay() {
             return(today.compareTo(workday) <= 0) ? workdays[month] : if (month == 11) { workdays[1] } else { workdays[month + 1] };
         };
 
-    jQuery('#next-workday span').html(next());
+    $('#next-workday span').html(next());
     //document.getElementById('next-workday').getElementsByTagName('span')[0].innerHTML = next();
 };
 
@@ -28,12 +28,12 @@ Threads.showNextWorkDay = function showNextWorkDay() {
  */
 Threads.init = function init() {
     var dateUrl = '//threadsokc.github.com/js/date.js';
-
-    jQuery.getScript(dateUrl, function () {
+console.info(jQuery.fn.jquery);
+    $.getScript(dateUrl, function () {
         Threads.showNextWorkDay();
     });
 };
 
-jQuery(function () {
+$(function () {
     Threads.init();
 });
