@@ -15,7 +15,7 @@ Threads.showNextWorkDay = function showNextWorkDay() {
         month = today.getMonth(),
         workday = Date.parse(workdays[month]),
         next = function () {
-            return(today.compareTo(workday) <= 0) ? workdays[month] : if (month == 11) { workdays[1] } else { workdays[month + 1] };
+            return(today.compareTo(workday) <= 0) ? workdays[month] : workdays[month + 1];
         };
 
     $('#next-workday span').html(next());
@@ -27,8 +27,10 @@ Threads.showNextWorkDay = function showNextWorkDay() {
  * @requires jQuery
  */
 Threads.init = function init() {
-    var dateUrl = '//threadsokc.github.com/js/date.js';
-console.info(jQuery.fn.jquery);
+    var dateUrl = 'http://threadsokc.github.com/js/date.js';
+
+    console.info(jQuery.fn.jquery);
+    
     $.getScript(dateUrl, function () {
         Threads.showNextWorkDay();
     });
