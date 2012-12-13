@@ -10,7 +10,7 @@ var Threads = Threads || {};
  * @returns String Short month and day.
  */
 Threads.showNextWorkDay = function () {
-    var workdays = ["Jan. 13", "Feb. 3", "Mar. 3", "Apr. 17", "May 5", "June 2", "July TBD", "Aug. TBD", "Sept. TBD", "Oct. TBD", "Nov. TBD", "Dec. TBD"],
+    var workdays = ["Jan. 13", "Feb. 3", "Mar. 3", "Apr. 17", "May 5", "June 2", "July 1", "Aug. 1", "Sept. 1", "Oct. 1", "Nov. 1", "Dec. 1"],
         today = Date.today(),
         month = today.getMonth(),
         workday = Date.parse(workdays[month]),
