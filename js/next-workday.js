@@ -29,6 +29,14 @@ Threads.showNextWorkDay = function () {
 Threads.init = function () {
     console.log('Threads.init');
     var dateUrl = 'http://threadsokc.github.com/js/date.js';
+    
+    $.getScript(dateUrl)
+.done(function(script, textStatus) {
+  console.log( textStatus );
+})
+.fail(function(jqxhr, settings, exception) {
+  console.error( "Triggered ajaxError handler." );
+});  
 
     $.getScript(dateUrl, function() {
         Threads.showNextWorkDay();
