@@ -35,6 +35,6 @@ Threads.init = function () {
     });
 };
 
-$(document).ready(function () {
+$(window).load(function () {
     Threads.init();
 });
