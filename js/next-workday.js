@@ -15,7 +15,7 @@ Threads.showNextWorkDay = function showNextWorkDay() {
         month = today.getMonth(),
         workday = Date.parse(workdays[month]),
         next = function () {
-            return (today.compareTo(workday) <= 0) ? workdays[month] : workdays[month + 1];
+            return today.compareTo(workday) <= 0 ? workdays[month] : workdays[month + 1];
         };
 
     $('#next-workday span').html(next());
