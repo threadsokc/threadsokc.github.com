@@ -34,6 +34,6 @@ console.info(jQuery.fn.jquery);
     });
 };
 
-$(function () {
+(function () {
     Threads.init();
 });
